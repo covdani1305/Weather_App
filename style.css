@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+  font-family: 'Rubik', sans-serif;
+  background-image: url(img/wallpaper.jpg);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+  z-index: 0;
+}
+.card {
+  background-color: #ffffff;
+  padding: 4rem;
+  border-radius: 1rem;
+  margin: 12rem auto;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.09);
+  opacity: 95%;
+}
+.search {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  /* width: 30rem; */
+}
+.search-bar {
+  border-radius: 0.7rem;
+  height: 4rem;
+  width: 100%;
+  padding-left: 1.6rem;
+  border: none;
+  transition: all 0.3s;
+  background-color: #f4f4f4;
+}
+.search-bar:hover {
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+.search-bar:focus {
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+button {
+  margin: 0.5rem;
+  border-radius: 0.7rem;
+  border: none;
+  height: 4rem;
+  width: 5rem;
+  outline: none;
+  background: #2c2e33;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+button:hover {
+  background-color: #99a0b3;
+  scale: 105%;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+.search-icon {
+  height: 2.4rem;
+}
+
+.weather {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+.city {
+  margin-top: 3rem;
+  font-size: 2.4rem;
+  color: #2c2e33;
+}
+.country {
+  margin-bottom: 0.5rem;
+  font-size: 2.4rem;
+  color: #2c2e33;
+}
+.temp {
+  font-size: 3.2rem;
+  color: #2c2e33;
+}
+.icon {
+  height: 6rem;
+  opacity: 100%;
+  transition: all 0.3s;
+}
+.icon:hover {
+  scale: 110%;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.description {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #2c2e33;
+  text-transform: capitalize;
+}
+.humidity {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #2c2e33;
+  margin-bottom: 1rem;
+}
+.wind {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #2c2e33;
+  margin-bottom: 1rem;
+}
+
+.weather.loading {
+  visibility: hidden;
+  max-height: 20px;
+  color: #2c2e33;
+  position: relative;
+  font-size: 1.4rem;
+  transition: all 0.3s;
+}
+
+.weather.loading:after {
+  visibility: visible;
+  content: 'Loading...';
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  color: #2c2e33;
+  font-size: 1.4rem;
+}
